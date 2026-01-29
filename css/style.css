@@ -1,0 +1,159 @@
+:root {
+    --sanad-dark-blue: #0F2235;
+    --sanad-teal: #1BA6A6;
+    --sanad-teal-light: #4FD1C5;
+    --sanad-navy: #162F45;
+    --sanad-bg-light: #F5F7FA;
+    --sanad-text-dark: #0B1E2D;
+    --sanad-gold: #C9A24D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--sanad-text-dark);
+    background-color: var(--sanad-bg-light);
+}
+
+.navbar {
+    background-color: var(--sanad-navy) !important;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+    color: var(--sanad-teal-light) !important;
+}
+
+footer {
+    background-color: var(--sanad-navy) !important;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: var(--sanad-teal) !important;
+    border-color: var(--sanad-teal) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #168f8f !important;
+    border-color: #168f8f !important;
+}
+
+.btn-outline-primary {
+    color: var(--sanad-teal) !important;
+    border-color: var(--sanad-teal) !important;
+}
+
+.btn-outline-primary.active,
+.btn-outline-primary:hover {
+    background-color: var(--sanad-teal) !important;
+    color: #ffffff !important;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(27, 166, 166, 0.35);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(27, 166, 166, 0.5);
+}
+
+.hero-section {
+    background: linear-gradient(
+        rgba(15, 34, 53, 0.75),
+        rgba(15, 34, 53, 0.75)
+    ),
+    url('../assets/images/gaza_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    min-height: 500px;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.service-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(15, 34, 53, 0.15) !important;
+}
+
+.service-card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sanad-teal);
+}
+
+.table-dark {
+    background-color: var(--sanad-navy) !important;
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.badge-urgent {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.badge-normal {
+    background-color: var(--sanad-teal);
+    color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--sanad-teal);
+    box-shadow: 0 0 0 0.25rem rgba(27, 166, 166, 0.25);
+}
+
+.filter-btn {
+    border-radius: 20px;
+    margin: 0 5px;
+    padding: 8px 20px;
+}
+
+.filter-btn.active {
+    background-color: var(--sanad-teal);
+    color: #ffffff;
+}
+
+.fade-in {
+    display: none;
+}

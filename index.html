@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanad - Humanitarian Aid Coordination</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center text-white" href="#">
+            <img width="55" src="assets/images/logo.png" alt="Sanad Logo" class="me-2">
+            <span class="fs-4 d-none d-lg-inline">Sanad</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#data">Aid Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Request Aid</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header id="hero" class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-4">Coordinating Hope in Gaza City</h1>
+        <p class="lead mb-5">
+            Sanad connects humanitarian resources with those who need them most in Gaza.
+            Efficient, transparent, and impactful.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-lg cta-btn">Request Aid Now</a>
+    </div>
+</header>
+
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Our Aid Categories</h2>
+
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="Medical">Medical</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="Food">Food & Water</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="Shelter">Shelter</button>
+        </div>
+
+        <div class="row g-4" id="services-container"></div>
+    </div>
+</section>
+
+<section id="data" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Live Aid Distribution Status</h2>
+
+        <div id="area-filter-container" class="d-flex flex-wrap gap-2 justify-content-center mb-4"></div>
+
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-striped table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Urgency</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="aid-table-body"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="media" class="py-5 bg-dark text-white">
+    <div class="container text-center">
+        <h2 class="mb-4 fw-bold">On The Ground</h2>
+        <div class="ratio ratio-16x9 mx-auto" style="max-width:800px">
+            <video controls class="rounded shadow">
+                <source src="assets/video/aid_video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="mt-3 text-white-50">Documenting the delivery of essential supplies.</p>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4 fw-bold">Submit Aid Request</h2>
+
+                        <div id="form-feedback" class="alert alert-success d-none">
+                            Request submitted successfully! We are processing your request.
+                        </div>
+
+                        <form id="aid-request-form" novalidate>
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">ID Number</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Location</label>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>Select location</option>
+                                    <option>Gaza City</option>
+                                    <option>North Gaza</option>
+                                    <option>Deir Al-Balah</option>
+                                    <option>Khan Younis</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Aid Type</label>
+                                <select class="form-select" required>
+                                    <option value="" disabled selected>Select aid type</option>
+                                    <option>Medical</option>
+                                    <option>Food</option>
+                                    <option>Shelter</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Details</label>
+                                <textarea class="form-control" rows="3" required></textarea>
+                            </div>
+
+                            <button class="btn btn-primary w-100 btn-lg">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-white py-4 text-center">
+    <div class="container">
+        <p class="mb-0">&copy; 2026 Sanad - Humanitarian Aid Coordination</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
